@@ -1,0 +1,427 @@
+/* Importación de tipografías desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap');
+
+:root {
+    --primary: #0F172A;       /* Azul Oscuro / Indigo (60%) */
+    --secondary: #38BDF8;     /* Azul Cielo / Celeste (30%) */
+    --accent: #F59E0B;        /* Ámbar / Naranja (10%) */
+    --accent-hover: #D97706;  /* Naranja oscuro para el :hover */
+    --bg-neutro: #F8FAFC;     /* Blanco Grisáceo */
+    --white: #FFFFFF;
+    --gray: #64748B;
+    --border: #CBD5E1;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-neutro);
+    color: var(--primary);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Títulos con Poppins */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Header Compartido (RF7) */
+.main-header {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo-img {
+    height: 65px; /* Subimos de 40px a 65px para que tenga mucha más presencia */
+    width: auto;  /* Esto mantiene la proporción perfecta para que no se deforme */
+    object-fit: contain;
+}
+
+.logo-link span {
+    font-size: 1.8rem; /* Aumenta el tamaño de las letras de "Caribe Tech" */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--secondary);
+}
+
+/* Contenedor Principal Adaptativo */
+.main-content {
+    flex: 1;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Botones Base */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* SECCIÓN HERO (index.html - RF2) */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--primary);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+.hero-image-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SECCIÓN SOBRE NOSOTROS (index.html) */
+.about-section {
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.about-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.about-card {
+    background-color: var(--white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.about-card i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* SECCIÓN CUADRÍCULA DE CURSOS (cursos.html - RF3) */
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 4rem;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-badge {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #0369a1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.course-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.course-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.course-topics {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.course-topics li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.course-topics li::before {
+    content: '•';
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+/* SECCIÓN FORMULARIO DE CONTACTO (contacto.html - RF4, RF5) */
+.contact-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--white);
+    transition: border-color 0.3s ease;
+}
+
+/* Estado :focus pedido en el Sistema de Diseño */
+.form-control:focus {
+    outline: none;
+    border-color: var(--secondary);
+    border-width: 2px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.privacy-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.privacy-group input[type="checkbox"] {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.privacy-text {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.info-box h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: var(--secondary);
+}
+
+/* Footer Compartido (RF7, RF8) */
+.main-footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 2rem 1.5rem;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    color: var(--white);
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--secondary);
+}
+
+/* REJILLA ADAPTATIVA / RESPONSIVE (RNF1) */
+@media (max-width: 968px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .about-grid, .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-container, .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+}
