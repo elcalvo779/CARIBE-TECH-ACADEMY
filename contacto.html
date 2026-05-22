@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Caribe Tech Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="logo.png" alt="Logo de Caribe Tech Academy con una palmera azul y una laptop" class="logo-img">
+                <span>Caribe Tech</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Contáctanos</h1>
+        <p class="page-subtitle">Escríbenos para resolver tus dudas o asegurar tu cupo en los próximos grupos presenciales en Galapa.</p>
+
+        <div class="contact-container">
+            
+            <form action="https://formspree.io/f/maqkovok" method="POST" class="contact-form">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="name" class="form-control" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="email" class="form-control" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="subject" class="form-control" placeholder="Inscripción, dudas, soporte..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="message" class="form-control" placeholder="Cuéntanos en qué curso estás interesado..." required></textarea>
+                </div>
+
+                <div class="privacy-group">
+                    <input type="checkbox" id="habeas-data" required>
+                    <label for="habeas-data" class="privacy-text">
+                        Aviso de Privacidad: Los datos personales aquí recolectados serán tratados de manera confidencial para la gestión exclusiva de su solicitud, bajo la ley de protección de datos (Habeas Data) vigente.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar Mensaje</button>
+            </form>
+
+            <div class="info-box">
+                <h3>Información de la Academia</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <div>
+                        <p><strong>Ubicación:</strong></p>
+                        <p>Galapa, Atlántico - Colombia</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <div>
+                        <p><strong>Correo de Soporte:</strong></p>
+                        <p>info@caribe.tech</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p class="footer-copy">&copy; 2026 Caribe Tech Academy. Todos los derechos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visitar Facebook de la academia"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visitar Instagram de la academia"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Visitar LinkedIn de la academia"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
